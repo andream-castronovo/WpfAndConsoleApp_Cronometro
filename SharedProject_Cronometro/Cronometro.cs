@@ -56,6 +56,10 @@ namespace WpfApp_Cronometro
         }
         #endregion
 
+        /// <summary>
+        /// Avvia il cronometro da dove ha lasciato
+        /// </summary>
+        /// <exception cref="Exception">Cronometro già avviato</exception>
         public void Start()
         {
             if (_started)
@@ -73,6 +77,10 @@ namespace WpfApp_Cronometro
                                            // quindi posso ricominciare a contare da qui.
         }
 
+        /// <summary>
+        /// Ferma il cronometro ma non lo resetta
+        /// </summary>
+        /// <exception cref="Exception">Cronometro non avviato</exception>
         public void Stop()
         {
             if (!_started)
