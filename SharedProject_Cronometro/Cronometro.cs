@@ -89,7 +89,7 @@ namespace WpfApp_Cronometro
             _started = false;
             _dataFine = DateTime.Now; // Per poter leggere il tempo anche se il cronometro è fermo
         }
-       
+
         /// <summary>
         /// Restituisce il tempo del cronometro sotto forma di stringa
         /// </summary>
@@ -97,7 +97,7 @@ namespace WpfApp_Cronometro
         public string LeggiTempo()
         {
             DateTime data = DateTime.Now;
-            
+
             if (!_started)
                 data = _dataFine; // Per poter leggere il tempo anche se il cronometro è fermo
 
@@ -105,9 +105,26 @@ namespace WpfApp_Cronometro
             string formattaOre = (data - _dataInizio).Hours < 10 ? "0" : "";
             string formattaMinuti = (data - _dataInizio).Minutes < 10 ? "0" : "";
             string formattaSecondi = (data - _dataInizio).Seconds < 10 ? "0" : "";
+            string formattaGiorni = (data - _dataInizio).Days < 10 ? "0" : "";
 
-            return $"{formattaOre}{(data - _dataInizio).Hours}:{formattaMinuti}{(data - _dataInizio).Minutes}:{formattaSecondi}{(data - _dataInizio).Seconds}";
+            string giorni = (data - _dataInizio).Days > 0 ? formattaGiorni + (data - _dataInizio).Days + ":" : "";
+            string ore = formattaOre + (data - _dataInizio).Hours;
+            string minuti = formattaMinuti + (data - _dataInizio).Minutes;
+            string secondi = formattaSecondi + (data - _dataInizio).Seconds;
+
+            return $"{giorni}{ore}:{minuti}:{secondi}";
         }
+
+
+        /// <summary>
+        /// Restituisce il tempo intero in modo da permettere usi generali
+        /// </summary>
+        /// <returns>TimeSpan: Tempo calcolato dal cronometro</returns>
+        public TimeSpan OttieniTempo()
+        {
+            return _started ? DateTime.Now - _dataInizio : _dataFine - _dataFine;
+        }
+
 
         /// <summary>
         /// Ottieni la data che sottratta ad oggi da il tempo scelto
@@ -119,14 +136,32 @@ namespace WpfApp_Cronometro
         {
             string[] tempi = tempo.Split(':');
 
-            if (tempi.Length != 3)
-                throw new Exception("Non hai inserito i tre valori correttamente");
+            TimeSpan ts;
 
-            TimeSpan ts = new TimeSpan(int.Parse(tempi[0]), int.Parse(tempi[1]), int.Parse(tempi[2]));
+            switch (tempi.Length)
+            {
+                case 1:
+                    ts = new TimeSpan(0,0,int.Parse(tempi[0]));
+                    break;
+                case 2:
+                    ts = new TimeSpan(0,int.Parse(tempi[0]),int.Parse(tempi[1]));
+                    break;
+                case 3:
+                    ts = new TimeSpan(int.Parse(tempi[0]), int.Parse(tempi[1]), int.Parse(tempi[2]));
+                    break;
+                case 4:
+                    ts = new TimeSpan(int.Parse(tempi[0]), int.Parse(tempi[1]), int.Parse(tempi[2]), int.Parse(tempi[3]));
+                    break;
+                default:
+                    throw new Exception("Non hai inserito i tre valori correttamente");
+
+            }
 
             // La data di ora, meno il tempo scelto e convertito in TimeSpan
             // ci darà la data che se sottratta alla data attuale darà quel tempo
+
             return DateTime.Now - ts;
+
         }
     }
 }

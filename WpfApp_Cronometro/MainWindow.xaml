@@ -18,14 +18,14 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
-            <Label Grid.Row="0" Content="HH:MM:SS" FontSize="17" Width="90"/>
+            <Label Grid.Row="0" Content="DD:HH:MM:SS" FontSize="17" Width="120"/>
             <TextBox Grid.Row="1" Name="txtTempo" Height="30" TextAlignment="Center"/>
             <Button Grid.Row="2" Name="btnResetConTempo" Click="btnResetConTempo_Click" FontSize="20" Content="ResetConTempo"/>
         </Grid>
        <!--#endregion-->
         
         <!--#region Cronometro--> 
-        <Grid Height="200" Width="400" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10,0,0,10">
+        <Grid Height="200" Width="477" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10,0,0,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
