@@ -13,13 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp_Cronometro
+namespace WpfAndConsoleApp_Cronometro
 {
     /// <summary>
     /// Logica di interazione per MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        // Programmato da Andrea Maria Castronovo iniziata il 09/10/2022
         public MainWindow()
         {
             InitializeComponent();
@@ -103,6 +104,12 @@ namespace WpfApp_Cronometro
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
+            // R = Reset
+            // S = Start
+            // Q = Quit
+            // L = Leggi
+            // F = Ferma
+
             try
             {
                 if (e.Key == Key.R)

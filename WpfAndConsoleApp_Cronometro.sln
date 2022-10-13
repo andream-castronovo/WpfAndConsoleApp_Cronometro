@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp_Cronometro", "WpfApp
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedProject_Cronometro", "SharedProject_Cronometro\SharedProject_Cronometro.shproj", "{A3F61B46-035B-4C65-A986-FBF16753AD58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp_Cronometro", "ConsoleApp_Cronometro\ConsoleApp_Cronometro.csproj", "{718317AA-F070-4967-B7A9-FC871E47296F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{E24D25A5-2134-42AB-A4CD-B5F8FDEC6B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E24D25A5-2134-42AB-A4CD-B5F8FDEC6B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E24D25A5-2134-42AB-A4CD-B5F8FDEC6B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{718317AA-F070-4967-B7A9-FC871E47296F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{718317AA-F070-4967-B7A9-FC871E47296F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{718317AA-F070-4967-B7A9-FC871E47296F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{718317AA-F070-4967-B7A9-FC871E47296F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -25,6 +31,7 @@ Global
 		SolutionGuid = {52CA6E2D-8234-4C87-AACC-F70A4AA2E6B3}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SharedProject_Cronometro\SharedProject_Cronometro.projitems*{718317aa-f070-4967-b7a9-fc871e47296f}*SharedItemsImports = 4
 		SharedProject_Cronometro\SharedProject_Cronometro.projitems*{a3f61b46-035b-4c65-a986-fbf16753ad58}*SharedItemsImports = 13
 		SharedProject_Cronometro\SharedProject_Cronometro.projitems*{e24d25a5-2134-42ab-a4cd-b5f8fdec6b39}*SharedItemsImports = 4
 	EndGlobalSection

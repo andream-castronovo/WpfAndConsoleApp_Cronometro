@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfApp_Cronometro.Properties
+namespace WpfAndConsoleApp_Cronometro.Properties
 {
 
 

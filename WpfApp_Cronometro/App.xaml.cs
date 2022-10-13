@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace WpfApp_Cronometro
+namespace WpfAndConsoleApp_Cronometro
 {
     /// <summary>
     /// Logica di interazione per App.xaml

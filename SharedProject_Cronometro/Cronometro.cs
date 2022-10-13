@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media.Animation;
 
-namespace WpfApp_Cronometro
+namespace WpfAndConsoleApp_Cronometro
 {
     internal class Cronometro
     {
+        // Classe programmata da Andrea Maria Castronovo iniziata il 09/10/2022
+
         #region CDC
         DateTime _dataInizio = DateTime.Now; // Entrambe alla data attuale così in caso l'utente non avvi
         DateTime _dataFine = DateTime.Now;   // mai il cronometro la sottrazione sarà 0
